@@ -73,7 +73,7 @@ export default function Home() {
       </Head>
         <div className="flex container-l">
           <div className="w-full ml-4 mr-6 lg:w-8/12">
-            <p className="mt-3 text-sm ">Newest Posts</p>
+            <p className="mt-3 text-sm ">Newest Posts !</p>
             <div className="posts">
               { posts && posts.length !== 0 ? posts?.map(post => {
                 return ( <PostCard post={ post } key={post._id}/>)
