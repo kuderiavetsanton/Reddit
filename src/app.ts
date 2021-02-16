@@ -10,6 +10,7 @@ import postRoutes from './routes/postRoutes'
 import authRoutes from './routes/authRoutes'
 import subRoutes from './routes/subRoutes'
 import miscRoutes from './routes/miscRoutes'
+import userRoutes from './routes/userRoutes'
 
 //port
 
@@ -44,6 +45,7 @@ app.use('/auth',authRoutes)
 app.use('/post',postRoutes)
 app.use('/sub',subRoutes)
 app.use('/misc',miscRoutes)
+app.use('/user',userRoutes)
 
 //Error route
 app.use('/',(err: {status:number, errors?: Record<string,any>,message?: string},req:Request,res:Response,next:NextFunction) => {

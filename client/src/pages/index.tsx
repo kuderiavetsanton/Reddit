@@ -97,9 +97,7 @@ export default function Home() {
                       <img
                         src={sub.imageUrl}
                         alt="image"
-                        width={35}
-                        height={35}
-                        className="rounded-full "
+                        className="w-12 h-12 rounded-full"
                       />
                       <p className="pl-2 font-semibold">r/{ sub.name}</p>
                     </div>

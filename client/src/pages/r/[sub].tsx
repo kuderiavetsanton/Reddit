@@ -117,7 +117,11 @@ export default function Sub() {
           <div className="h-24 bg-white">
             <div className="relative flex container-l">
               <div className="absolute " style={ {top: '-15px'} }>
-                <Image src={sub?.imageUrl || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"} alt="subImage" width="70px" height="70px" className={classNames('rounded-full',{ 'cursor-pointer':userOwn })} onClick={e => openInput('image')}/>
+                <img
+                  src={sub?.imageUrl || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"}
+                  alt="image"
+                  className="w-12 h-12 rounded-full"
+                />
               </div>
               <div className="flex flex-col pt-2 pl-24">
                 <div className="flex items-start align-center">
