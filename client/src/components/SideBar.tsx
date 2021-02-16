@@ -24,7 +24,7 @@ export default function SideBar({ createdAt, description ,marginTop, name, image
         <div className="py-3 bg-white">
             <Link href={`/r/${ name }`}>
                 <div className="flex items-center mx-4 mb-2 cursor-pointer">
-                    <Image src={imageUrl || 'https://cdn.pixabay.com/photo/2014/04/02/10/25/man-303792_1280.png'} width="60" height="60" className="rounded-full"/>
+                    <Image src={'https://cdn.pixabay.com/photo/2014/04/02/10/25/man-303792_1280.png'} width="60" height="60" className="rounded-full"/>
                     <p className="pl-3 font-medium">r/{name}</p>
                 </div>
             </Link>

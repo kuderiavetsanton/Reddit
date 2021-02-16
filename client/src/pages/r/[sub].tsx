@@ -120,7 +120,7 @@ export default function Sub() {
                 <img
                   src={sub?.imageUrl || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"}
                   alt="image"
-                  className="w-12 h-12 rounded-full"
+                  className="w-20 h-20 rounded-full"
                 />
               </div>
               <div className="flex flex-col pt-2 pl-24">
