@@ -9,7 +9,7 @@ export default function User() {
     let router = useRouter()
     let { username } = router.query
     let { data,error } = useSWR(username ? `/user/${username}` : null)
-    if(error) router.push('/')
+    console.log(error)
     if(data) console.log(data)
     return (
         

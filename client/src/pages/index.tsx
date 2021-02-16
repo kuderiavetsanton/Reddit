@@ -89,19 +89,17 @@ export default function Home() {
               </div>
               <div className="flex flex-col px-3 bg-white">
                 {topSubs?.map((sub:any,index:number,array:any) => {
-                  console.log(sub)
                   return (
                   <Link href={`/r/${sub.name}`} key={sub._id}>
                     <div className={classNames("flex items-center py-3 pl-6 cursor-pointer",{'border-b border-gray-300':index+1 !== array.length})}>
                       <span className="pr-2 ">{index + 1}</span>
                       <i className="pr-2 text-green-400 fas fa-caret-up fa-md"></i>
-                      <Image 
+                      <img
                         src={sub.imageUrl}
                         alt="image"
                         width={35}
                         height={35}
                         className="rounded-full "
-                        key={sub.imageUrl}
                       />
                       <p className="pl-2 font-semibold">r/{ sub.name}</p>
                     </div>
