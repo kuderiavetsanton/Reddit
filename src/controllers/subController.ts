@@ -10,11 +10,9 @@ export const createSub = async (req: Request, res: Response) => {
         req.body = trim(req.body,['description'])
         let { name, title, description } = req.body
         if(name === ''){
-            console.log(name)
             errors.name = 'Name cant be empty'
         }
         if(name.split(' ').length > 1){
-            console.log(name)
             errors.name = 'Name can contain only one word'
         }
         if(title.length < 5){

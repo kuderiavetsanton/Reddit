@@ -47,10 +47,8 @@ export const fetchPosts = async (req:Request, res:Response, next: NextFunction) 
     //if user is authorized retrieve posts with userVotes property else don`t
     let posts:PostDocument[];
     if(!user){
-        console.log('user doesnt exist')
         posts = await Post.populateThin(page)
     }else{
-        console.log('after loging in',user)
         posts = await Post.populateThinLoged(user.username,page)
     }
     res.json(posts) 

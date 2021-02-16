@@ -84,9 +84,10 @@ router.get('/top',async (req: Request,res: Response,next: NextFunction) => {
                 else:`https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png`
             }}}},
             { $sort: {postsAmount:-1} },
-            { $project:{author:1,description:1,title:1,posts:1,name:1,imageUrl:1, postAmount:1}},
+            { $project:{author:1,description:1,title:1,posts:1,name:1,imageUrl:1, postAmount:1,imageUrn:1}},
             { $limit: 5 }
         ])
+        console.log(topSubs)
         res.json(topSubs)
     } catch (error) {
         res.json(404).json({error:'Something went wrong'})
