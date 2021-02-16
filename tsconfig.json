@@ -22,5 +22,5 @@
       "noImplicitThis": true,
     },
     "include": ["src/**/*.ts"],
-    "exclude": ["node_modues"]
+    "exclude": ["node_modues","client"]
   }

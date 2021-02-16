@@ -24,7 +24,6 @@ export default function Sub() {
     const { data: sub, revalidate: revalidateSub } = useSWR(`/sub/${name}`)
     const { data, size: page, setSize: setPage, revalidate } = useSWRInfinite<Post[][]>(getKey)
     let posts: Post[] = data ? [].concat(...data) : null
-    console.log(posts)
     // Context state variables
     const { user, authenticated } = useAuthState()
 
@@ -63,7 +62,7 @@ export default function Sub() {
       inputRef.current.click()
     }
     const uploadImage = async (e:ChangeEvent<HTMLInputElement>) => {
-      const file = event.target.files[0]
+      const file = (event.target as HTMLInputElement).files[0]
       const formData = new FormData()
       formData.append('file',file)
       formData.append('type',inputRef.current.name)
