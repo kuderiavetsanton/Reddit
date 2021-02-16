@@ -101,6 +101,7 @@ export default function Home() {
                         width={35}
                         height={35}
                         className="rounded-full "
+                        key={sub.imageUrl}
                       />
                       <p className="pl-2 font-semibold">r/{ sub.name}</p>
                     </div>
